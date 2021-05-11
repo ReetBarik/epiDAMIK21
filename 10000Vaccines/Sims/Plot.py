@@ -1,5 +1,5 @@
-import os
-os.chdir('C:\\Users\\reetb\\Desktop\\epiDAMIK21\\Sims\\')
+# import os
+# os.chdir('C:\\Users\\reetb\\Desktop\\epiDAMIK21\\Sims\\')
 
 import covasim as cv
 

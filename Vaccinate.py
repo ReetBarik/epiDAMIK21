@@ -27,7 +27,7 @@ def generateDegreeSeeds():
 
 	deg = sorted(G.degree, key=lambda x: x[1], reverse=True)
 	seeds = []
-	for s,d in deg[0:12500]:
+	for s,d in deg[0:15000]:
 		seeds.append(s)
 
 	np.savetxt('India100kSeeds_Degree.txt', seeds, fmt='%d', delimiter=' ')
@@ -56,7 +56,7 @@ def generateRandomSeeds():
 	previousSeeds = set()
 	seeds = []
 
-	while (len(seeds) < 12500):
+	while (len(seeds) < 15000):
 		seed = randrange(100000)
 		if (seed not in previousSeeds):
 			seeds.append(seed)

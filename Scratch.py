@@ -31,3 +31,27 @@ sim.plot()
 sim.save('India100k.sim')		   # Save the sim
 
 np.count_nonzero(sim.people.infectious)
+
+import matplotlib.pyplot as plt
+
+x = [2500, 5000, 10000, 12500, 15000]
+
+ci_random = [82031, 79297, 73753, 70972, 68036]
+
+ci_degree = [81500, 78227, 71584, 68294, 64688]
+
+ci_PREEMPT = [76992, 68623, 54303, 48151, 41352]
+
+ci_noVaccine = [84997, 84997, 84997, 84997, 84997]
+
+fig, ax = plt.subplots()
+#ax.set_xticklabels(['2.5k', '5k', '10k', '12.5k', '15k'])
+ax.plot(x, ci_noVaccine, marker='o' ,label='No Vaccines')
+ax.plot(x, ci_random, marker='o' ,label='Random Vaccines')
+ax.plot(x, ci_degree, marker='o' ,label='Degree Vaccines')
+ax.plot(x, ci_PREEMPT, marker='o' ,label='PREEMPT Vaccines')
+
+ax.set_xlabel('% of Population Vaccinated') 
+ax.set_ylabel('Cumulative infections after 5 months') 
+ax.legend()
+plt.savefig('Result.PNG', dpi = 500)
