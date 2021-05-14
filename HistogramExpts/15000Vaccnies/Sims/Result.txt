@@ -1,0 +1,65 @@
+Simulation "No Vaccine" summary:
+   84997 cumulative infections
+       0 cumulative reinfections
+   84997 cumulative infectious
+   54358 cumulative symptomatic cases
+    3086 cumulative severe cases
+     725 cumulative critical cases
+   84751 cumulative recoveries
+     246 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "PREEMPT Vaccines": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "PREEMPT Vaccines" summary:
+   41671 cumulative infections
+       0 cumulative reinfections
+   41637 cumulative infectious
+   27101 cumulative symptomatic cases
+    1607 cumulative severe cases
+     355 cumulative critical cases
+   41412 cumulative recoveries
+     127 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "Degree Vaccines": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "Degree Vaccines" summary:
+   64690 cumulative infections
+       0 cumulative reinfections
+   64689 cumulative infectious
+   42253 cumulative symptomatic cases
+    2495 cumulative severe cases
+     614 cumulative critical cases
+   64495 cumulative recoveries
+     193 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "Random Vaccines": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "Random Vaccines" summary:
+   68035 cumulative infections
+       0 cumulative reinfections
+   68035 cumulative infectious
+   43416 cumulative symptomatic cases
+    2383 cumulative severe cases
+     547 cumulative critical cases
+   67846 cumulative recoveries
+     189 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
