@@ -15,12 +15,12 @@ import sys
 
 version = int(sys.argv[1])
 # 0 for PREEMPT and 1 for Random 2 for Degree
-choice = 0
+choice = 2
 
 # Seeds based on Degree
 def generateDegreeSeeds(version):
 
-	edgelist = 'Seattle_100k_Degree_V' + str(version) + '.edgelist'
+	edgelist = 'Seattle_100k_PREEMPT_V' + str(version) + '.edgelist'
 	G = nx.read_weighted_edgelist(edgelist, nodetype = int, create_using = nx.DiGraph)
 
 	deg = sorted(G.degree, key=lambda x: x[1], reverse=True)
@@ -84,9 +84,11 @@ if (choice == 0):
 	seeds = generateSeeds(version)
 if (choice == 1):
 	seeds = generateRandomSeeds(version)
+if (choice == 2):
+	seeds = generateDegreeSeeds(version)
 
 # Define the vaccine and add it to the sim
-vaccine =  cv.vaccine(days=31 + (version * 7), rel_sus=0.0, rel_symp=0.02, subtarget=vaccinateSeeds(sim2, seeds))
+vaccine =  cv.simple_vaccine(days=31 + (version * 7), rel_sus=0.0, rel_symp=0.02, subtarget=vaccinateSeeds(sim2, seeds))
 vaccine.vaccinations = vaccine.subtarget['vals'].astype(int)
 vaccine.initialize(sim2)
 sim2.pars['interventions'].append(vaccine)
@@ -96,6 +98,6 @@ for seed in seeds:
 	sim2.people.rel_trans[seed] = 0.0
 
 # Let it run for a week
-sim2.run(until='2020-04-30')
+sim2.run(until='2020-06-19')
 # Save the sim
 sim2.save('Seattle100kV' + str(version + 1) + '.sim')
