@@ -34,12 +34,23 @@ ci_degree = [x/1000 for x in ci_degree]
 
 ci_PREEMPT = [x/1000 for x in ci_PREEMPT]
 
-df = pd.DataFrame({'No Vaccine': ci_no, 'Random': ci_random,'Degree': ci_degree, 'PREEMPT': ci_PREEMPT}, index=index)
+df = pd.DataFrame({'Random': ci_random,'Degree': ci_degree, 'PREEMPT': ci_PREEMPT}, index=index)
 
-ax = df.plot.bar(rot=0) #, color={"Random Vaccines": "red", "Degree Vaccines": "green", "PREEMPT Vaccines": "blue"})
-ax.set_ylim(0,95)
-plt.legend(loc="upper right", ncol=len(df.columns), prop={'size': 6})
-plt.ylabel("Cumulative Infections (as a % of Population)")
-plt.xlabel("% of Population Vaccinated")
+ax = df.plot.bar(rot=0) 
+bars = ax.get_children()[0:18]
+for i in range(0,6):
+    bars[i].set_hatch('\\')
+
+#for i in range(6,12):
+#    bars[i].set_hatch('x')
+    
+for i in range(12,18):
+    bars[i].set_hatch('.')
+
+ax.plot(ci_no, color = 'red', marker = 'o', linestyle='dashed', linewidth=0.5, markersize=2, label = 'No vaccine', alpha = 0.75)
+ax.set_ylim(20,95)
+plt.legend(loc="upper right", ncol=len(df.columns) + 1, prop={'size': 9})
+plt.ylabel("Cumulative #infections (as a % of population)")
+plt.xlabel("% of population vaccinated")
 plt.title("Effect of seed selection strategies on disease spread")
 plt.savefig('CI_Hist.png', dpi = 500)
