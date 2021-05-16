@@ -1,0 +1,82 @@
+Simulation "No Vaccine" summary:
+   84997 cumulative infections
+       0 cumulative reinfections
+   84997 cumulative infectious
+   54358 cumulative symptomatic cases
+    3086 cumulative severe cases
+     725 cumulative critical cases
+   84751 cumulative recoveries
+     246 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "Degree_500_20": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "Degree_500_20" summary:
+   82595 cumulative infections
+       0 cumulative reinfections
+   82594 cumulative infectious
+   53043 cumulative symptomatic cases
+    2871 cumulative severe cases
+     660 cumulative critical cases
+   82362 cumulative recoveries
+     229 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "Degree_1000_20": 2020-06-19 (170/170) (0.01 s)  •••••••••••••••••••• 100%
+
+Simulation "Degree_1000_20" summary:
+   80110 cumulative infections
+       0 cumulative reinfections
+   80108 cumulative infectious
+   51551 cumulative symptomatic cases
+    2836 cumulative severe cases
+     662 cumulative critical cases
+   79868 cumulative recoveries
+     238 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "PREEMPT_500_20": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "PREEMPT_500_20" summary:
+   77661 cumulative infections
+       0 cumulative reinfections
+   77660 cumulative infectious
+   49822 cumulative symptomatic cases
+    2697 cumulative severe cases
+     631 cumulative critical cases
+   77460 cumulative recoveries
+     197 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
+
+  Running "PREEMPT_1000_20": 2020-06-19 (170/170) (0.00 s)  •••••••••••••••••••• 100%
+
+Simulation "PREEMPT_1000_20" summary:
+   70727 cumulative infections
+       0 cumulative reinfections
+   70726 cumulative infectious
+   45502 cumulative symptomatic cases
+    2533 cumulative severe cases
+     590 cumulative critical cases
+   70520 cumulative recoveries
+     203 cumulative deaths
+       0 cumulative tests
+       0 cumulative diagnoses
+       0 cumulative quarantined people
+       0 cumulative vaccinations
+       0 cumulative vaccinated people
