@@ -86,7 +86,7 @@ if (choice == 1):
 	seeds = generateRandomSeeds(version)
 
 # Define the vaccine and add it to the sim
-vaccine =  cv.vaccine(days=31 + (version * 7), rel_sus=0.0, rel_symp=0.02, subtarget=vaccinateSeeds(sim2, seeds))
+vaccine =  cv.simple_vaccine(days=31 + (version * 7), rel_sus=0.0, rel_symp=0.02, subtarget=vaccinateSeeds(sim2, seeds))
 vaccine.vaccinations = vaccine.subtarget['vals'].astype(int)
 vaccine.initialize(sim2)
 sim2.pars['interventions'].append(vaccine)
@@ -96,6 +96,6 @@ for seed in seeds:
 	sim2.people.rel_trans[seed] = 0.0
 
 # Let it run for a week
-sim2.run(until='2020-04-30')
+sim2.run(until='2020-06-19')
 # Save the sim
 sim2.save('Seattle100kV' + str(version + 1) + '.sim')
