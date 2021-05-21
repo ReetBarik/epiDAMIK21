@@ -25,7 +25,7 @@ def generateDegreeSeeds(version):
 
 	deg = sorted(G.degree, key=lambda x: x[1], reverse=True)
 	seeds = []
-	for s,d in deg[0:1000]:
+	for s,d in deg[0:500]:
 		seeds.append(s)
 
 	np.savetxt('Seattle100kSeedsV' + str(version) + '.txt', seeds, fmt='%d', delimiter=' ')
