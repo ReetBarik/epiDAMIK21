@@ -1,4 +1,8 @@
 import covasim as cv
+from cycler import cycler
+import matplotlib.pyplot as plt
+plt.rc('axes', prop_cycle= cycler(linestyle=['-', '--', ':', '-.', (0, (10, 5, 1, 5, 1, 5))]))
+plt.rc('lines', linewidth=8)
 
 simB = cv.load('Baseline.sim')
 sim1 = cv.load('Degree_1000_20.sim')
