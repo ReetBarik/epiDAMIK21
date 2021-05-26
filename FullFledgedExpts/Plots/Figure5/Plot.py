@@ -1,8 +1,7 @@
 import covasim as cv
 from cycler import cycler
 import matplotlib.pyplot as plt
-plt.rc('axes', prop_cycle= cycler(linestyle=['-', '--', ':', '-.', (0, (10, 5, 1, 5, 1, 5))]))
-plt.rc('lines', linewidth=8)
+plt.rc('axes', prop_cycle= cycler(linestyle=['-', '--', ':', '-.', (0, (5, 1, 1, 1, 1, 1))]))
 
 simB = cv.load('Baseline.sim')
 sim1 = cv.load('Degree_20000_1.sim')
@@ -19,11 +18,6 @@ sim4.label = 'PREEMPT_1000_20'
 
 msim = cv.MultiSim([simB, sim1, sim2, sim3, sim4]) 
 msim.run()
-msim.plot(to_plot=['cum_infections'], do_save=True, fig_path='Fig4CI.png', mpl_args={'dpi':500, 'font_size':15}) #, plot_args={'linestyle' : ['solid', 'dashed', 'dash_dot', 'dotted', '.-.']}, )
-msim.plot(to_plot=['new_infections'], do_save=True, fig_path='Fig4NI.png', mpl_args={'dpi':500, 'font_size':15}) #, plot_args={'linestyle' : ['solid', 'dashed', 'dash_dot', 'dotted', '.-.']}, )
-msim.plot(to_plot=['cum_deaths'], do_save=True, fig_path='Fig4CD.png', mpl_args={'dpi':500, 'font_size':15}) #, plot_args={'linestyle' : ['solid', 'dashed', 'dash_dot', 'dotted', '.-.']}, )
-
-# msim.run()
-# msim.plot_result('cum_infections').savefig('Fig4CI.png', dpi = 500)
-# msim.plot_result('new_infections').savefig('Fig4NI.png', dpi = 500)
-# msim.plot_result('cum_deaths').savefig('Fig4CD.png', dpi = 500)
+msim.plot(to_plot=['cum_infections'], plot_args={'lw':5}, mpl_args={'font_size':17}).savefig('Fig4CI.png', dpi = 1000) 
+msim.plot(to_plot=['new_infections'], plot_args={'lw':5}, mpl_args={'font_size':17}).savefig('Fig4NI.png', dpi = 1000)
+msim.plot(to_plot=['cum_deaths'], plot_args={'lw':5}, mpl_args={'font_size':17}).savefig('Fig4CD.png', dpi = 1000)
